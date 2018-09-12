@@ -4,19 +4,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
-namespace DateTime
+namespace Project.View
 {
-	public partial class MainPage : ContentPage
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class DateTimePage : ContentPage
 	{
-		public MainPage()
+		public DateTimePage()
 		{
 			InitializeComponent();
-		}
+            NavigationPage.SetHasNavigationBar(this, false);
+        }
 
-        private void Button_Clicked(object sender, EventArgs e)
+        private async void Button_Clicked(object sender, EventArgs e)
         {
-            Label label = new Label { Text = "Pokušaj nečega" };
+            await Navigation.PushAsync(new MainPage());
         }
     }
 }

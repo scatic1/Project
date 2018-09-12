@@ -14,10 +14,10 @@
             </Image>
             <Button RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.19}"
                         RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.5}"  x:Name="bigGrey" Text="Jag är konsult" BorderRadius="9" BackgroundColor="#FFFFFF"  WidthRequest="233" HeightRequest="47"
-               FontSize="14"  TextColor="#4A4A4A" ></Button>
+               FontSize="14"  TextColor="#4A4A4A" Clicked="bigGrey_Clicked"></Button>
             <Button RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.19}"
                         RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.6}"  x:Name="bigGreyy" Text="Jag är ett företag" BorderRadius="9" BackgroundColor="#FFFFFF"  WidthRequest="233" HeightRequest="47"
-                TextColor="#4A4A4A" FontSize="14"></Button>
+                TextColor="#4A4A4A" FontSize="14" Clicked="bigGreyy_Clicked"></Button>
         </RelativeLayout>
     </ContentPage.Content>
 </ContentPage>

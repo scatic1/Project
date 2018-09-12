@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Project.View;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,5 +18,15 @@ namespace Project
 			InitializeComponent ();
             NavigationPage.SetHasNavigationBar(this, false);
         }
-	}
+
+        private async void bigGrey_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new DateTimePage());
+        }
+
+        private async void bigGreyy_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new HomeButton());
+        }
+    }
 }

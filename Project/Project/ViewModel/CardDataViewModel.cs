@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Globalization;
 using System.Text;
 using Xamarin.Forms;
 
@@ -8,6 +9,7 @@ namespace Project
 {
     public class CardDataViewModel
     {
+        DateTime test;
         public IList<CardDataModel> CardDataCollection { get; set; }
         public object SelectedItem { get; set; }
         public CardDataViewModel()
@@ -39,26 +41,35 @@ namespace Project
             {
                 new CardDataModel
                 {
-                    ProfileImage ="https://scontent.fsjj2-1.fna.fbcdn.net/v/t1.0-9/37375855_2003064403037421_6435417763254108160_n.jpg?_nc_cat=0&oh=12429706f92c7140c38e8037cb7a525c&oe=5C303160",
-                    Name="Merima" ,
-                    Availability =false,
-                    Profession="Web developer",
-                   Education ="Bachelor engineer",
-                    Rate="870 ",
-                   Star=3.5,
-                  Experience=new string[]{ "Propeller","ETF"}
-      
+                    ProfileImage ="lars.jpg",
+                    Name="Lars" ,
+                    Availability =true,
+                    Profession="Business Controller",
+                   Education ="M.Sc. Business & Economics",
+                    Rate="750",
+                   Star=4.5,
+                  Experience=new string[]{ "2017 Deloitte, Business Controler", "2016 PWC, Assistant Business Controller"},
+                  About="is dedicated to detail and efficiency. As a former elite athlete she knows the value of working hard, but also the power of a strong team.",
+                  SpiritAnimal="lion.png",
+                  YearsExperience=2,
+                 //NextAvailabil = DateTime.ParseExact("Sun 08 Jun 2013 8:30 AM -06:00", "ddd dd MMM yyyy h:mm tt zzz", null)
+                 NextAvailabil = DateTime.ParseExact("07/05/2016 17:07:00", "MM/dd/yyyy HH:mm:ss", CultureInfo.InvariantCulture)
+
         },
                  new CardDataModel
                 {
                     ProfileImage ="https://scontent.fsjj2-1.fna.fbcdn.net/v/t1.0-9/15420992_1359484517395416_7247385033604416897_n.jpg?_nc_cat=0&oh=7350927e79d49b90e58a95e034072bae&oe=5BF1ED08",
                     Name="Merima" ,
-                    Availability =true,
+                    Availability =false,
                     Profession="Web developer",
                    Education ="Bachelor engineer",
                     Rate="900 ",
-                    Star=4
-                    
+                    Star=4,
+                    Experience=new string[]{ "2018 Propeller, Developer","2017 ETF, Bachelor engineer"},
+                         About="is dedicated to detail and efficiency. As a former elite athlete she knows the value of working hard, but also the power of a strong team.",
+                           SpiritAnimal="bird.png",
+                           YearsExperience=2,
+                           NextAvailabil = DateTime.ParseExact("12/04/2019 17:12:00", "MM/dd/yyyy HH:mm:ss", CultureInfo.InvariantCulture)
             },
                   new CardDataModel
                 {
@@ -68,7 +79,12 @@ namespace Project
                     Profession="Web developer",
                    Education ="Bachelor engineer",
                     Rate="340 ",
-                    Star=5
+                    Star=5,
+                    Experience=new string[]{ "2018 Propeller, Developer","2017 ETF, Bachelor engineer"},
+                          About="is dedicated to detail and efficiency. As a former elite athlete she knows the value of working hard, but also the power of a strong team.",
+                                SpiritAnimal="bird.png",
+                                YearsExperience=2,
+                                NextAvailabil = DateTime.ParseExact("12/04/2019 17:12:00", "MM/dd/yyyy HH:mm:ss", CultureInfo.InvariantCulture)
             },
         };
 

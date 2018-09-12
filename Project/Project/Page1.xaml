@@ -1,124 +1,192 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:Project"
              xmlns:abstractions="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
              xmlns:rating="clr-namespace:Syncfusion.SfRating.XForms;assembly=Syncfusion.SfRating.XForms"
              x:Class="Project.Page1">
-    
+
 
     <ContentPage.Content>
-
-        <StackLayout>
+        <ScrollView>
             <StackLayout>
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"></ColumnDefinition>
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"></RowDefinition>
-                        <RowDefinition Height="Auto"></RowDefinition>
-                        <RowDefinition Height="Auto"></RowDefinition>
-                    </Grid.RowDefinitions>
-
-                    <Image Source="now.jpg"
-                   HeightRequest="232" HorizontalOptions="FillAndExpand" VerticalOptions="Start" Margin="0, -50" Aspect="AspectFill" IsVisible="{Binding Item.Availability}"></Image>
-                    <Image Source="soon.jpg"
-                   HeightRequest="232" HorizontalOptions="FillAndExpand" VerticalOptions="Start" Margin="0, -50" Aspect="AspectFill" IsVisible="{Binding Item.NonAv}"></Image>
-                    <Label Text="NEEDL" HorizontalOptions="Center" Grid.Row="0" Margin="0, 30" FontAttributes="Bold" TextColor="White"></Label>
-                    <Grid Margin="-20, -95"  Grid.Row="1">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="25"></RowDefinition>
-                        </Grid.RowDefinitions>
+                <StackLayout>
+                    <Grid>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto"></ColumnDefinition>
-                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                        <Image Source="WhiteBackBigger.png" Grid.Column="0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" HeightRequest="50" WidthRequest="50"></Image>
-                        <Label Text="Back" HorizontalOptions="Start" TextColor="White" Grid.Column="1" Margin="-45,0,0,0" FontSize="17"></Label>
-                        <Button BackgroundColor="Transparent" Text="Back" TextColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Clicked="Button_Clicked"></Button>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                        </Grid.RowDefinitions>
+
+                        <Image Source="now.jpg"
+                   HeightRequest="232" HorizontalOptions="FillAndExpand" VerticalOptions="Start" Margin="0, -50" Aspect="AspectFill" IsVisible="{Binding Item.Availability}"></Image>
+                        <Image Source="soon.jpg"
+                   HeightRequest="232" HorizontalOptions="FillAndExpand" VerticalOptions="Start" Margin="0, -50" Aspect="AspectFill" IsVisible="{Binding Item.NonAv}"></Image>
+                        <Label Text="NEEDL" HorizontalOptions="Center" Grid.Row="0" Margin="0, 30" FontAttributes="Bold" TextColor="White"></Label>
+                        <Grid Margin="-20, -95"  Grid.Row="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="25"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Image Source="WhiteBackBigger.png" Grid.Column="0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" HeightRequest="50" WidthRequest="50"></Image>
+                            <Label Text="Back" HorizontalOptions="Start" TextColor="White" Grid.Column="1" Margin="-45,0,0,0" FontSize="17"></Label>
+                            <Button BackgroundColor="Transparent" Text="Back" TextColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Clicked="Button_Clicked"></Button>
+                        </Grid>
+                        <Label IsVisible="{Binding Item.Availability}" HorizontalOptions="Center" Grid.Row="2" TextColor="White" Margin="0,-75">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="You're in luck!" FontSize="13"/>
+                                    <Span Text="{Binding Item.Name}" FontSize="13"/>
+                                    <Span Text=" is..." FontSize="13"/>
+                                    <Span Text="&#x0a;"/>
+                                    <Span Text="AVAILABLE NOW!" FontAttributes="Bold" FontSize="34" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <Label IsVisible="{Binding Item.NonAv}" HorizontalOptions="Center" Grid.Row="2" TextColor="White" Margin="0,-75">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="All we need is a little patience. " FontSize="13"/>
+                                    <Span Text="{Binding Item.Name}" FontSize="13"/>
+                                    <Span Text=" is..." FontSize="13"/>
+                                    <Span Text="&#x0a;"/>
+                                    <Span Text="AVAILABLE SOON!" FontAttributes="Bold" FontSize="34" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
                     </Grid>
-                    <Label IsVisible="{Binding Item.Availability}" HorizontalOptions="Center" Grid.Row="2" TextColor="White" Margin="0,-75">
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="You're in luck!" FontSize="13"/>
-                                <Span Text="{Binding Item.Name}" FontSize="13"/>
-                                <Span Text=" is..." FontSize="13"/>
-                                <Span Text="&#x0a;"/>
-                                <Span Text="AVAILABLE NOW!" FontAttributes="Bold" FontSize="34" />
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
-                    <Label IsVisible="{Binding Item.NonAv}" HorizontalOptions="Center" Grid.Row="2" TextColor="White" Margin="0,-75">
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="All we need is a little patience. " FontSize="13"/>
-                                <Span Text="{Binding Item.Name}" FontSize="13"/>
-                                <Span Text=" is..." FontSize="13"/>
-                                <Span Text="&#x0a;"/>
-                                <Span Text="AVAILABLE SOON!" FontAttributes="Bold" FontSize="34" />
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
-                </Grid>
-            </StackLayout>
-            <StackLayout>
-                <abstractions:CircleImage Margin="0,-20,0,0" HeightRequest="140" WidthRequest="140" Source="{Binding Item.ProfileImage}"></abstractions:CircleImage>
-               
+                </StackLayout>
+                <abstractions:CircleImage Margin="0,-20,0,0" HeightRequest="140" WidthRequest="140" Source="{Binding Item.ProfileImage}"  ></abstractions:CircleImage>
+
+                <StackLayout>
 
 
-                    <Label HorizontalOptions="Center">
 
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="{Binding Item.Name}"  FontSize="34" TextColor="#5D5D5D"/>
-                                <Span Text="&#x0a;"/>
-                                <Span Text="{Binding Item.Education}" FontSize="14" TextColor="#5D5D5D"/>
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
+                    <Grid Margin="0,-10,0,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Label HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="0" Text="{Binding Item.Name}"  FontSize="34" TextColor="#5D5D5D"/>
 
-            
+                        <Label Margin="0,-10,0,0" HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="1"  Text="{Binding Item.Education}" FontSize="14" TextColor="#5D5D5D"/>
+
+
+
+                    </Grid>
+
+
+
 
                     <rating:SfRating Margin="140,0,0,0" x:Name="rating" ItemCount="5" Value="{Binding Item.Star}" ItemSize="12" Precision="Half" >
-                    <rating:SfRating.RatingSettings>
-                        <rating:SfRatingSettings  RatedFill="#FBB03B" UnRatedFill="#999999" RatedStrokeWidth="0" UnRatedStrokeWidth="0" />
+                        <rating:SfRating.RatingSettings>
+                            <rating:SfRatingSettings  RatedFill="#FBB03B" UnRatedFill="#999999" RatedStrokeWidth="0" UnRatedStrokeWidth="0" />
                         </rating:SfRating.RatingSettings>
                     </rating:SfRating>
-                <Grid>
-                    <Grid.RowDefinitions >
-                        <RowDefinition Height="Auto" />
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="37*"/>
-                        <ColumnDefinition Width="0.3*"/>
-                   
-                        <ColumnDefinition Width="24*"/>
-                        <ColumnDefinition Width="0.3*"/>
-                        <ColumnDefinition Width="38.4*"/>
-                    </Grid.ColumnDefinitions>
-                    <Label HorizontalOptions="End" VerticalOptions="Center"  Grid.Row="0" Grid.Column="0" Text="{Binding Item.Rate}"></Label>
-                    <BoxView HorizontalOptions="Fill" VerticalOptions="Fill" Color="#4A4A4A" Grid.Row="0" Grid.Column="1"></BoxView>
-                    <Label HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="0" Grid.Column="2" Text="{Binding Item.Rate}"></Label>
-                    <BoxView HorizontalOptions="Fill" VerticalOptions="Fill" Color="#4A4A4A" Grid.Row="0" Grid.Column="3"></BoxView>
-                    <Label HorizontalOptions="Start" VerticalOptions="Center" Grid.Row="0" Grid.Column="4" Text="{Binding Item.Rate}"></Label>
-                </Grid>
-                <ListView x:Name="MyListView">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <ViewCell>
-                                <Label Text="{Binding Item.Experience, StringFormat='The value : {0:N}'}" />
-                            </ViewCell>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
-                <Button x:Name="bigGreen" Text="CALL FOR AN INTERVIEW" BorderRadius="9" BackgroundColor="#41AF59" HorizontalOptions="Center" WidthRequest="233" HeightRequest="47"
-                TextColor="#FFFFFF" FontSize="14"></Button>
-                <Button>
-                   
+                    <Grid>
+                        <Grid.RowDefinitions >
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="37*"/>
+                            <ColumnDefinition Width="0.3*"/>
+
+                            <ColumnDefinition Width="24*"/>
+                            <ColumnDefinition Width="0.3*"/>
+                            <ColumnDefinition Width="38.4*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid HorizontalOptions="End" VerticalOptions="Center"  Grid.Row="0" Grid.Column="0" >
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Label Grid.Row="0">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="{Binding Item.Rate}"    FontSize="21" TextColor="#5D5D5D"/>
+                                        <Span Text="kr"   FontSize="21" TextColor="#5D5D5D"/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <Label Margin="0,-9,0,0" Grid.Row="1" Text="Hourly Rate"   FontSize="10.5" TextColor="#5D5D5D" ></Label>
+                        </Grid>
+                        <BoxView HorizontalOptions="Fill" VerticalOptions="Fill" Color="#4A4A4A" Grid.Row="0" Grid.Column="1"></BoxView>
+                        <Grid HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="0" Grid.Column="2" >
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Label  HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="0" >
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="{Binding Item.YearsExperience}"    FontSize="21" TextColor="#5D5D5D"/>
+                                        <Span Text=" yrs"   FontSize="21" TextColor="#5D5D5D" />
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <Label Margin="0,-9,0,0" Grid.Row="1" Text="Experience" FontSize="10.5" TextColor="#5D5D5D"></Label>
+                        </Grid>
+                        <BoxView HorizontalOptions="Fill" VerticalOptions="Fill" Color="#4A4A4A" Grid.Row="0" Grid.Column="3"></BoxView>
+                        <Grid HorizontalOptions="Start" VerticalOptions="Center" Grid.Row="0" Grid.Column="4" >
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Image Grid.Row="0" Source="{Binding Item.SpiritAnimal}" HeightRequest="25" WidthRequest="25"/>
+                            <Label Margin="0,-7,0,0" Grid.Row="1" Text="Spirit Animal" TextColor="#5D5D5D"  FontSize="10.5"></Label>
+                        </Grid>
+
+                    </Grid>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Label Grid.Row="0" Margin="43,0,0,0" HorizontalOptions="FillAndExpand">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="Experience" FontSize="14" TextColor="#5D5D5D" FontAttributes="Bold"/>
+                                    <Span Text="&#x0a;"/>
+                                    <Span  Text="• " FontSize="14" TextColor="#5D5D5D"/>
+                                    <Span Text="{Binding Item.Experience[0]}"   FontSize="14" TextColor="#5D5D5D"/>
+                                    <Span Text="&#x0a;"/>
+                                    <Span Text="• " FontSize="14" TextColor="#5D5D5D"/>
+                                    <Span Text="{Binding Item.Experience[1]}"  FontSize="14" TextColor="#5D5D5D"/>
+
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+
+                    </Grid>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Label Grid.Row="0" Margin="43,0,20,0" HorizontalOptions="FillAndExpand">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="About " FontSize="14" TextColor="#5D5D5D" FontAttributes="Bold"/>
+                                    <Span Text="{Binding Item.Name}"  FontSize="14" TextColor="#5D5D5D" FontAttributes="Bold" />
+                                    <Span Text="&#x0a;"/>
+                                    <Span Text="{Binding Item.Name}"  FontSize="14" TextColor="#5D5D5D" />
+                                    <Span Text=" "/>
+                                    <Span Text="{Binding Item.About}"  FontSize="14" TextColor="#5D5D5D"/>
+
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                    </Grid>
+                    <Button x:Name="bigGreen" Text="CALL FOR AN INTERVIEW" BorderRadius="9" BackgroundColor="#41AF59" HorizontalOptions="Center" WidthRequest="233" HeightRequest="47"
+                TextColor="#FFFFFF" FontSize="14" Clicked="bigGreen_Clicked"></Button>
+                <Button Clicked="Button_Clicked_1" Text="De Molim te">
                 </Button>
 
             </StackLayout>
         </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
