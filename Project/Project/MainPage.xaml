@@ -2,13 +2,58 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Project"
-             x:Class="Project.MainPage">
+  
+             x:Class="Project.MainPage"
+             BackgroundColor="#E5E5E5">
 
+
+
+    <ContentPage.BindingContext>
+        <local:CardDataViewModel/>
+
+    </ContentPage.BindingContext>
+
+    <!--<StackLayout>
+        -->
+    <!-- Place new controls here -->
+    <!--
+
+        
+        <Button Text="Click" Clicked="Button_Clicked"></Button>
+    </StackLayout>-->
     <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+        <local:NavViewBotomText ></local:NavViewBotomText>
 
+        <StackLayout Margin="0,30,0,0" Orientation="Vertical">
+
+            <Label Text="SELECT A CANDIDATE TO FIND OUT MORE"
+               FontSize="13"
+               TextColor="#FFFFFF"
+               VerticalOptions="Start"
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center"
+               BackgroundColor="Transparent"
+               HorizontalOptions="CenterAndExpand"/>
+            <ListView x:Name="listView" 
+                  BackgroundColor="#5B5B5D"
+                  RowHeight="150"
+                  ItemsSource="{Binding CardDataCollection}" 
+                  HasUnevenRows="True" 
+                  ItemSelected="listView_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <local:CardViewTemplate/>
+
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <!--<Button Text="Click" Clicked="Button_Clicked"></Button>-->
+
+            <Button x:Name="bigRED" Text="FIND THREE NEW CANDIDATES" BorderRadius="9" BackgroundColor="#Transparent" HorizontalOptions="Center" WidthRequest="233" HeightRequest="47"
+                TextColor="#BA3C3C" FontSize="14" BorderColor="#BA3C3C" BorderWidth="1"></Button>
+            <Button Text="Home screen" Clicked="Button_Clicked_1"></Button>
+        </StackLayout>
+    </StackLayout>
 </ContentPage>

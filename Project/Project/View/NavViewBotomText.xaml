@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Project.NavViewBotomText">
+  <ContentView.Content>
+        <StackLayout>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Image Source="top33.jpg" Aspect="AspectFill"
+                   HeightRequest="232" HorizontalOptions="FillAndExpand" VerticalOptions="Start" Margin="0, -50"></Image>
+                <Label Text="NEEDL" HorizontalOptions="Center" Grid.Row="0" Margin="0, 30" FontAttributes="Bold" TextColor="White"></Label>
+                <Grid Margin="-20, -95"  Grid.Row="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="25"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Image Source="WhiteBackBigger.png" Grid.Column="0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" HeightRequest="50" WidthRequest="50"></Image>
+                    <Label Text="Back" HorizontalOptions="Start" TextColor="White" Grid.Column="1" Margin="-45,0,0,0" FontSize="17"></Label>
+                    <Button BackgroundColor="Transparent" TextColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Clicked="Button_Clicked"></Button>
+                </Grid>
+                <Label HorizontalOptions="Center" Grid.Row="2" TextColor="White" Margin="0,-25">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Let's introduce you to your..." FontSize="13"/>
+                            <Span Text="&#x0a;"/>
+                            <Span Text="TOP 3 CANDIDATES" FontAttributes="Bold" FontSize="34"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </Grid>
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

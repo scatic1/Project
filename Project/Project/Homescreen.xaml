@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ButtonCircle.FormsPlugin.Abstractions;assembly=ButtonCircle.FormsPlugin.Abstractions"
+             x:Class="Project.Homescreen">
+    <ContentPage.Content>
+        <RelativeLayout Padding="0">
+            <!-- Background -->
+            <Image
+            Aspect="AspectFill"
+            Source="https://s3-alpha.figma.com/img/b5cd/cc5f/afa38d984d4c2e393f253aa708e390ca"
+            RelativeLayout.WidthConstraint= "{ConstraintExpression Type=RelativeToParent, Property=Width ,Factor=1.7}"
+            RelativeLayout.HeightConstraint= "{ConstraintExpression Type=RelativeToParent, Property=Height}">
+            </Image>
+            <Button RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.19}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.5}"  x:Name="bigGrey" Text="Jag är konsult" BorderRadius="9" BackgroundColor="#FFFFFF"  WidthRequest="233" HeightRequest="47"
+               FontSize="14"  TextColor="#4A4A4A" ></Button>
+            <Button RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.19}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.6}"  x:Name="bigGreyy" Text="Jag är ett företag" BorderRadius="9" BackgroundColor="#FFFFFF"  WidthRequest="233" HeightRequest="47"
+                TextColor="#4A4A4A" FontSize="14"></Button>
+        </RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>

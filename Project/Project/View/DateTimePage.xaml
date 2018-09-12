@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DateTime"
+             xmlns:system="clr-namespace:System;assembly=mscorlib"
+             x:Class="DateTime.MainPage">
+
+    <StackLayout>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Image Source="https://s3-alpha.figma.com/img/0f23/b9c7/cbe961c689756053d03241dce36f4de4"
+                   HeightRequest="232" HorizontalOptions="FillAndExpand" VerticalOptions="Start" Margin="0, -50" Aspect="AspectFill"></Image>
+            <Label Text="NEEDL" HorizontalOptions="Center" Grid.Row="0" Margin="0, 30" FontAttributes="Bold" TextColor="White"></Label>
+            <Grid Margin="-20, -95"  Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="25"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Image Source="WhiteBackBigger.png" Grid.Column="0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" HeightRequest="50" WidthRequest="50"></Image>
+                <Label Text="Back" HorizontalOptions="Start" TextColor="White" Grid.Column="1" Margin="-45,0,0,0" FontSize="17"></Label>
+                <Button BackgroundColor="Transparent" Text="Back" TextColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Clicked="Button_Clicked"></Button>
+            </Grid>
+            <Label HorizontalOptions="Center" Grid.Row="2" TextColor="White" Margin="0,-75">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Time is money folks!" FontSize="13"/>
+                        <Span Text="&#x0a;"/>
+                        <Span Text="WHEN DO YOU NEEDL?" FontAttributes="Bold" FontSize="34"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+        </Grid>
+
+        <Label Margin="0,60,0,0" Text="SELECT START DATA" FontSize="13" TextColor="#50555C" HorizontalOptions="Center"></Label>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="65*"></ColumnDefinition>
+                <ColumnDefinition Width="35*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <DatePicker x:Name="PocetnoD" HorizontalOptions="CenterAndExpand" MinimumDate="{x:Static system:DateTime.Today}" Format="ddd d MMM" Scale="2" Grid.Column="0"></DatePicker>
+            <TimePicker x:Name="PocetnoS" Format="HH MM" HorizontalOptions="CenterAndExpand" Scale="2" Grid.Column="1"></TimePicker>
+        </Grid>
+
+        <Label Margin="0,40,0,0" Text="SELECT END DATA" FontSize="13" TextColor="#50555C" HorizontalOptions="Center"></Label>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="65*"></ColumnDefinition>
+                <ColumnDefinition Width="35*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <DatePicker x:Name="KrajnjeD" HorizontalOptions="CenterAndExpand" MinimumDate="{x:Static system:DateTime.Today}" Format="ddd d MMM" Scale="2" Grid.Column="0"></DatePicker>
+            <TimePicker x:Name="KrajnjeS" Format="HH MM" HorizontalOptions="CenterAndExpand" Scale="2" Grid.Column="1"></TimePicker>
+        </Grid>
+
+        <Button x:Name="bigGreen" Text="FIND ANOTHER CONSULTANT" BorderRadius="9" BackgroundColor="#41AF59" HorizontalOptions="Center" WidthRequest="233" HeightRequest="47" Margin="0,40,0,0"
+                TextColor="#FFFFFF" FontSize="14"></Button>
+
+    </StackLayout>
+
+</ContentPage>

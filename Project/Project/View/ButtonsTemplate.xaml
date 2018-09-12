@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ButtonCircle.FormsPlugin.Abstractions;assembly=ButtonCircle.FormsPlugin.Abstractions"
+             x:Class="TestiranjeContentView.ButtonsTemplate">
+  <ContentView.Content>
+      <StackLayout>
+            <Button x:Name="bigGreen" Text="FIND ANOTHER CONSULTANT" BorderRadius="9" BackgroundColor="#41AF59" HorizontalOptions="Center" WidthRequest="233" HeightRequest="47"
+                TextColor="#FFFFFF" FontSize="14"></Button>
+
+            <Button x:Name="smallGreen" Text="TIME REPORT &amp; INVOICE" BorderRadius="9" BackgroundColor="#41AF59" HorizontalOptions="Center" WidthRequest="142" HeightRequest="47"
+                TextColor="#FFFFFF" FontSize="14"></Button>
+
+            <Button x:Name="smallRed" Text="END CONTRACT" BorderRadius="9" BackgroundColor="Transparent" HorizontalOptions="Center" WidthRequest="142" HeightRequest="47"
+                TextColor="#BA3C3C" FontSize="14" BorderColor="#BA3C3C" BorderWidth="1"></Button>
+
+            <Button x:Name="bigGrey" Text="CONTACT LARS" BorderRadius="9" BackgroundColor="#ACB4BE" HorizontalOptions="Center" WidthRequest="233" HeightRequest="47"
+                TextColor="#FFFFFF" FontSize="14"></Button>
+
+            <Button x:Name="bigRED" Text="FIND THREE NEW CANDIDATES" BorderRadius="9" BackgroundColor="#Transparent" HorizontalOptions="Center" WidthRequest="233" HeightRequest="47"
+                TextColor="#BA3C3C" FontSize="14" BorderColor="#BA3C3C" BorderWidth="1"></Button>
+
+            <Button x:Name="smallGreenT" Text="ADD TO SHORTLIST" BorderRadius="9" BackgroundColor="Transparent" HorizontalOptions="Center" WidthRequest="142" HeightRequest="47"
+                TextColor="#41AF59" FontSize="10" BorderColor="#41AF59" BorderWidth="1"></Button>
+
+            <local:CircleButton BackgroundColor="Red"  FontIcon="Material"
+        Icon="md-call-end" TextColor="White" FontSize="45" ></local:CircleButton>
+          
+        </StackLayout>
+  </ContentView.Content>
+</ContentView>

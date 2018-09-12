@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Project"
+             x:Class="Project.HomeButton"
+             xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+             xmlns:local1="clr-namespace:ButtonCircle.FormsPlugin.Abstractions;assembly=ButtonCircle.FormsPlugin.Abstractions">
+
+    <StackLayout>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Image Source="https://s3-alpha.figma.com/img/6cbb/bc2d/911ce4b900d54ebc92722b65675cdf98"
+                   HeightRequest="232" HorizontalOptions="FillAndExpand" VerticalOptions="Start" Margin="0, -50" Aspect="AspectFill"></Image>
+            <Label Text="NEEDL" HorizontalOptions="Center" Grid.Row="0" Margin="0, 30" FontAttributes="Bold" TextColor="White"></Label>
+            <Grid Margin="-20, -95"  Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="25"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Image Source="WhiteBackBigger.png" Grid.Column="0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" HeightRequest="50" WidthRequest="50"></Image>
+                <Label Text="Back" HorizontalOptions="Start" TextColor="White" Grid.Column="1" Margin="-45,0,0,0" FontSize="17"></Label>
+                <Button BackgroundColor="Transparent" Text="Back" TextColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Clicked="Button_Clicked" ></Button>
+            </Grid>
+            <Label HorizontalOptions="Center" Grid.Row="2" TextColor="White" Margin="0,-25">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Saknar du några bandmedlemmar?" FontSize="13"/>
+                        <Span Text="&#x0a;"/>
+                        <Span Text="VAD BEHÖVER DU?" FontAttributes="Bold" FontSize="34"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+        </Grid>
+        
+        <Label HorizontalTextAlignment="Center" TextColor="#50555C" Text="VILKEN KONSULT BEHÖVER DU HYRA IN?" Margin="0, 40, 0, 30" FontSize="13"></Label>
+
+        <Grid MinimumHeightRequest="200">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50*"></ColumnDefinition>
+                <ColumnDefinition Width="50*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <StackLayout Grid.Row="0" Grid.Column="0" Margin="0,0,0,30">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="34.18*"></ColumnDefinition>
+                        <ColumnDefinition Width="47.45*"></ColumnDefinition>
+                        <ColumnDefinition Width="18.37*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="" Grid.Column="0"></Label>
+                    <local1:CircleButton BackgroundColor="#5B5B5D"  FontIcon="Material" Grid.Column="1" FontSize="Large"
+        Icon="md-call-end" TextColor="White"  HeightRequest="93" WidthRequest="93"></local1:CircleButton>
+                    <Label Text="" Grid.Column="2"></Label>
+                </Grid>
+                <Label Text="EKONOMIASSISTENT" HorizontalTextAlignment="Center" TextColor="#50555C"></Label>
+            </StackLayout>
+
+            <StackLayout Grid.Row="0" Grid.Column="1" Margin="0,0,0,30">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="18.37*"></ColumnDefinition>
+                        <ColumnDefinition Width="47.45*"></ColumnDefinition>
+                        <ColumnDefinition Width="34.18*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="" Grid.Column="0"></Label>
+                    <local1:CircleButton BackgroundColor="#5B5B5D"  FontIcon="Material" HeightRequest="93" WidthRequest="93"
+        Icon="md-directions-run" TextColor="White" Grid.Column="1" FontSize="Large"></local1:CircleButton>
+                    <Label Text="" Grid.Column="2"></Label>
+                </Grid>
+                <Label Text="REDOVISININGSEKONOM" HorizontalTextAlignment="Center" TextColor="#50555C"></Label>
+            </StackLayout>
+
+            <StackLayout Grid.Row="1" Grid.Column="0" Margin="0,0,0,30">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="34.18*"></ColumnDefinition>
+                        <ColumnDefinition Width="47.45*"></ColumnDefinition>
+                        <ColumnDefinition Width="18.37*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="" Grid.Column="0"></Label>
+                    <local1:CircleButton BackgroundColor="#5B5B5D"  FontIcon="Material" Grid.Column="1" FontSize="Large"
+        Icon="md-assignment" TextColor="White" HeightRequest="93" WidthRequest="93"></local1:CircleButton>
+                    <Label Text="" Grid.Column="2"></Label>
+                </Grid>
+                <Label Text="CONTROLLER" HorizontalTextAlignment="Center" TextColor="#50555C"></Label>
+            </StackLayout>
+
+            <StackLayout Grid.Row="1" Grid.Column="1" Margin="0,0,0,30">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="18.37*"></ColumnDefinition>
+                        <ColumnDefinition Width="47.45*"></ColumnDefinition>
+                        <ColumnDefinition Width="34.18*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="" Grid.Column="0"></Label>
+                    <local1:CircleButton BackgroundColor="#5B5B5D"  FontIcon="Material" Grid.Column="1" FontSize="Large"
+        Icon="md-face" TextColor="White" HeightRequest="93" WidthRequest="93"></local1:CircleButton>
+                    <Label Text="" Grid.Column="2"></Label>
+                </Grid>
+                <Label Text="REDOVISNINGSCHEFF" HorizontalTextAlignment="Center" TextColor="#50555C"></Label>
+            </StackLayout>
+
+            <StackLayout Grid.Row="2" Grid.Column="0" Margin="0,0,0,30">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="34.18*"></ColumnDefinition>
+                        <ColumnDefinition Width="47.45*"></ColumnDefinition>
+                        <ColumnDefinition Width="18.37*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="" Grid.Column="0"></Label>
+                    <local1:CircleButton BackgroundColor="#5B5B5D"  FontIcon="Material" Grid.Column="1" FontSize="Large"
+        Icon="md-local-library" TextColor="White" HeightRequest="93" WidthRequest="93"></local1:CircleButton>
+                    <Label Text="" Grid.Column="2"></Label>
+                </Grid>
+                <Label Text="EKONOMICHEF" HorizontalTextAlignment="Center" TextColor="#50555C"></Label>
+                </StackLayout>
+
+            <StackLayout Grid.Row="2" Grid.Column="1" Margin="0,0,0,30">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="18.37*"></ColumnDefinition>
+                        <ColumnDefinition Width="47.45*"></ColumnDefinition>
+                        <ColumnDefinition Width="34.18*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="" Grid.Column="0"></Label>
+                    <local1:CircleButton BackgroundColor="#5B5B5D"  FontIcon="Material" HorizontalOptions="Center" FontSize="Large" Grid.Column="1" 
+        Icon="md-business-center" TextColor="White" HeightRequest="93" WidthRequest="93"></local1:CircleButton>
+                        <Label Text="" Grid.Column="2"></Label>
+                </Grid>
+                <Label Text="CFO       " HorizontalTextAlignment="Center" TextColor="#50555C"></Label>
+            </StackLayout>
+
+
+        </Grid>
+    </StackLayout>
+
+</ContentPage>
