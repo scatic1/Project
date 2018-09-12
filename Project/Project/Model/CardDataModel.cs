@@ -30,12 +30,7 @@ namespace Project
             }
         }
         public double Star{ get; set; }
-
-        public DateTime NextAvailabil { get; set; }
-
-        public string[] Experience { get; set; }
-        public string About { get; set; }
-        public string SpiritAnimal { get; set; }
-        public int YearsExperience { get; set; }
+        //public List<string> Experience { get; set; }
+       public  string[] Experience;
     }
 }
