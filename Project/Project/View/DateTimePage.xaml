@@ -48,8 +48,8 @@
                 <ColumnDefinition Width="65*"></ColumnDefinition>
                 <ColumnDefinition Width="35*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <DatePicker x:Name="PocetnoD" HorizontalOptions="CenterAndExpand" MinimumDate="{x:Static system:DateTime.Today}" Format="ddd d MMM" Scale="2" Grid.Column="0"></DatePicker>
-            <TimePicker x:Name="PocetnoS" Format="HH MM" HorizontalOptions="CenterAndExpand" Scale="2" Grid.Column="1"></TimePicker>
+            <DatePicker x:Name="PocetnoD" HorizontalOptions="Center" MinimumDate="{x:Static system:DateTime.Today}" Format="ddd d MMM" Grid.Column="0" WidthRequest="150"></DatePicker>
+            <TimePicker x:Name="PocetnoS" Format="HH MM" HorizontalOptions="CenterAndExpand" Grid.Column="1"></TimePicker>
         </Grid>
 
         <Label Margin="0,40,0,0" Text="SELECT END DATA" FontSize="13" TextColor="#50555C" HorizontalOptions="Center"></Label>
@@ -59,8 +59,8 @@
                 <ColumnDefinition Width="65*"></ColumnDefinition>
                 <ColumnDefinition Width="35*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <DatePicker x:Name="KrajnjeD" HorizontalOptions="CenterAndExpand" MinimumDate="{x:Static system:DateTime.Today}" Format="ddd d MMM" Scale="2" Grid.Column="0"></DatePicker>
-            <TimePicker x:Name="KrajnjeS" Format="HH MM" HorizontalOptions="CenterAndExpand" Scale="2" Grid.Column="1"></TimePicker>
+            <DatePicker x:Name="KrajnjeD" HorizontalOptions="Center" MinimumDate="{x:Static system:DateTime.Today}" Format="ddd d MMM"  WidthRequest="150" Grid.Column="0" IsVisible="False"></DatePicker>
+            <TimePicker x:Name="KrajnjeS" Format="HH MM" HorizontalOptions="CenterAndExpand" Grid.Column="1"></TimePicker>
         </Grid>
 
         <Button x:Name="bigGreen" Text="FIND ANOTHER CONSULTANT" BorderRadius="9" BackgroundColor="#41AF59" HorizontalOptions="Center" WidthRequest="233" HeightRequest="47" Margin="0,40,0,0"

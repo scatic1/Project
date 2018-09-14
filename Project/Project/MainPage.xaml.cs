@@ -61,12 +61,17 @@ namespace Project
         private async void Button_Clicked_1(object sender, EventArgs e)
         {
 
-            await Navigation.PushAsync(new Homescreen());
+            await Navigation.PushAsync(new TeamOverviewPage());
         }
 
         private async void Button_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new AddToShortList());
+        }
+
+        private async void bigRED_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Homescreen());
         }
     }
 }

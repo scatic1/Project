@@ -68,6 +68,7 @@
   <ItemGroup>
     <Compile Include="CustomNavigationRenderer.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="Renderers\PickerRenderer.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -122,9 +123,6 @@
     <AndroidResource Include="Resources\drawable\headphone.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\WhiteBackBigger.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable\top3.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -147,6 +145,12 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\lion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\WhiteBackBigger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\invoice.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

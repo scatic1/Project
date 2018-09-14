@@ -8,9 +8,6 @@ namespace Project.ViewModel
         public Page1ViewModel(CardDataModel cardDataModel)
         {
             Item = cardDataModel;
-
-
-            Task.Run(async () => await SomeTask());
         }
 
         private CardDataModel _item;
@@ -19,13 +16,6 @@ namespace Project.ViewModel
             get => _item;
             set { SetProperty(ref _item, value); }
         }
-
-        async Task<bool> SomeTask()
-        {
-            //
-
-            return false;
-        }
-
+        
     }
 }

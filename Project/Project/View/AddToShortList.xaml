@@ -29,7 +29,7 @@
                     <Label Text="Back" HorizontalOptions="Start" TextColor="White" Grid.Column="1" Margin="-45,0,0,0" FontSize="17"></Label>
                     <Button BackgroundColor="Transparent" TextColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Clicked="Button_Clicked"></Button>
                 </Grid>
-                <Label HorizontalOptions="Center" Grid.Row="2" TextColor="White" Margin="0,-25">
+                <Label HorizontalOptions="Center" Grid.Row="2" TextColor="White" Margin="0,-25" HorizontalTextAlignment="Center">
                     <Label.FormattedText>
                         <FormattedString>
                             <Span Text="Is love in the air tonight?" FontSize="13"/>

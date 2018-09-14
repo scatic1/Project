@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:abstractions="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+             xmlns:rating="clr-namespace:Syncfusion.SfRating.XForms;assembly=Syncfusion.SfRating.XForms"
+             xmlns:forms="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             x:Class="Project.View.Invoice">
+    <ContentPage.Content>
+
+        <ScrollView>
+            <StackLayout>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+          
+                <Image Source="invoice.png"
+                   HeightRequest="232" HorizontalOptions="FillAndExpand" VerticalOptions="Start" Margin="0, -30" Aspect="AspectFill"></Image>
+                <Label Text="NEEDL" HorizontalOptions="Center" Grid.Row="0" Margin="0, 30" FontAttributes="Bold" TextColor="#8F8E94"></Label>
+                <Grid Margin="-20, -145"  Grid.Row="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="25"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Image Rotation="180" Source="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Antu_arrow-right.svg/2000px-Antu_arrow-right.svg.png"  Grid.Column="0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" HeightRequest="50" WidthRequest="50"></Image>
+                    <Label Text="Back" HorizontalOptions="Start" TextColor="#6C6C6C" Grid.Column="1" Margin="-45,0,0,0" FontSize="17"></Label>
+                    <Button BackgroundColor="Transparent" Text="Back" TextColor="#6C6C6C" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Clicked="Button_Clicked"></Button>
+                </Grid>
+                <Label HorizontalTextAlignment="Center" HorizontalOptions="Center" Grid.Row="2" TextColor="#50555C" Margin="0,-75">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Check Please! Here is the..." FontSize="13"/>
+
+                            <Span Text="&#x0a;"/>
+                            <Span Text="INVOICE FOR WEEK 32!" FontAttributes="Bold" FontSize="34"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </Grid>
+            <abstractions:CircleImage Margin="0,-20,0,0" HeightRequest="140" WidthRequest="140" Source="{Binding Item.ProfileImage}"  ></abstractions:CircleImage>
+            <Grid Margin="0,5,0,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Label HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="0" Text="{Binding Item.Name}"  FontSize="34" TextColor="#5D5D5D"/>
+
+                <Label Margin="0,-10,0,0" HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="1"  Text="{Binding Item.Profession}" FontSize="14" TextColor="#5D5D5D"/>
+
+
+
+            </Grid>
+            <Label HorizontalTextAlignment="Center" HorizontalOptions="Center" FontSize="34" TextColor="#5D5D5D" >
+                <Label.FormattedText>
+                    <FormattedString>
+
+                        <Span Text="{Binding Item.YearsExperience}"></Span>
+                        <Span Text="0"/>
+
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label Margin="0,-10,0,0" HorizontalTextAlignment="Center" HorizontalOptions="Center" FontSize="10.5" TextColor="#5D5D5D" Text="Hours Worked This Week" >
+            </Label>
+            <Label Margin="0,15,0,0" HorizontalTextAlignment="Center" HorizontalOptions="Center" FontSize="34" TextColor="#5D5D5D" >
+                <Label.FormattedText>
+                    <FormattedString>
+                      
+                        <Span Text="{Binding Item.YearsExperience}"></Span>
+                        <Span Text=" 000 kr "/>
+              
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label  Margin="0,-10,0,0"  HorizontalTextAlignment="Center" HorizontalOptions="Center" FontSize="10.5" TextColor="#5D5D5D" Text="Total Balance" >
+            </Label>
+            <rating:SfRating Margin="97,15,0,0" x:Name="rating" ItemCount="5"  ItemSize="30" Precision="Half" >
+                <rating:SfRating.RatingSettings>
+                    <rating:SfRatingSettings  RatedFill="#FBB03B" UnRatedFill="#DADADA" RatedStrokeWidth="0" UnRatedStrokeWidth="0" />
+                </rating:SfRating.RatingSettings>
+            </rating:SfRating>
+            <Label HorizontalTextAlignment="Center" HorizontalOptions="Center" FontSize="10.5" TextColor="#5D5D5D" >
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Please Rate " />
+                        <Span Text="{Binding Item.Name}"></Span>
+                        <Span Text="' "/>
+                        <Span Text="Performance For This Week" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Grid Margin="0,15,0,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50*"></ColumnDefinition>
+                    <ColumnDefinition Width="50*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="smallRed" Text="SHOW DETAILED TIME REPORT" BorderRadius="9" BackgroundColor="Transparent" HorizontalOptions="End" WidthRequest="142" HeightRequest="47"
+                TextColor="#BA3C3C" FontSize="10.5" BorderColor="#BA3C3C" BorderWidth="1" Grid.Column="0">
+
+                </Button>
+                <Button x:Name="smallGreenT" Text="SEND INVOICE" BorderRadius="9" BackgroundColor="#41AF59" HorizontalOptions="Center" WidthRequest="142" HeightRequest="47"
+                TextColor="#FFFFFF" FontSize="10" BorderColor="#41AF59" BorderWidth="1" Grid.Column="1"></Button>
+                
+            </Grid>
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
