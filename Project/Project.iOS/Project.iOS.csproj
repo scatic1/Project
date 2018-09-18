@@ -89,6 +89,11 @@
     <CodesignKey>iPhone Distribution</CodesignKey>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
   </PropertyGroup>
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'Default' ">
+    <AppExtensionDebugBundleId />
+    <EnvironmentVariables>
+    </EnvironmentVariables>
+  </PropertyGroup>
   <ItemGroup>
     <Compile Include="CustomNavigationRenderer.cs" />
     <Compile Include="Main.cs" />

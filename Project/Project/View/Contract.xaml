@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:abstractions="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+             x:Class="Project.View.Contract">
+    <ContentPage.Content>
+
+        <ScrollView>
+            <StackLayout>
+                <StackLayout>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Image Source="contract.jpg"
+                    HeightRequest="232" HorizontalOptions="FillAndExpand" VerticalOptions="Start" Margin="0, -50" Aspect="AspectFill"></Image>
+                <Label Text="NEEDL" HorizontalOptions="Center" Grid.Row="0" Margin="0, 30" FontAttributes="Bold" TextColor="White"></Label>
+                <Grid Margin="-20, -95"  Grid.Row="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="25"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Image Source="WhiteBackBigger.png" Grid.Column="0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" HeightRequest="50" WidthRequest="50"  ></Image>
+                    <Label Text="Back" HorizontalOptions="Start" TextColor="White" Grid.Column="1" Margin="-45,0,0,0" FontSize="17"></Label>
+                    <Button BackgroundColor="Transparent" Text="Back" TextColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Clicked="Button_Clicked" ></Button>
+                </Grid>
+                <Label HorizontalOptions="Center" Grid.Row="2" TextColor="#50555C" Margin="0,-75">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Great choice! Let's seal the deal!" FontSize="13"/>
+                            <Span Text="&#x0a;"/>
+                            <Span Text="SIGN CONTRACT" FontAttributes="Bold" FontSize="34"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </Grid>
+        </StackLayout>
+        <abstractions:CircleImage Margin="0,-20,0,0" HeightRequest="140" WidthRequest="140" Source="{Binding Item.ProfileImage}"  ></abstractions:CircleImage>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                       
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="0" Margin="30,20,30,20"  TextColor="#5D5D5D" FontSize="10.5">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Consultant Agreement A123456" FontAttributes="Bold"></Span>
+                                <Span Text="&#x0a;"/>
+                                <Span Text="&#x0a;"/>
+                                <Span Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet massa vitae tortor condimentum lacinia quis vel eros donec. Lorem ipsum dolor sit amet consectetur adipiscing elit duis. Egestas diam in arcu cursus euismod quis viverra nibh cras. Phasellus faucibus scelerisque eleifend donec pretium vulputate. Velit euismod in pellentesque massa placerat duis ultricies lacus sed. Velit aliquet sagittis id consectetur. Urna porttitor rhoncus dolor purus non enim praesent elementum. Neque aliquam vestibulum morbi blandit cursus risus at ultrices."></Span>
+                                <Span Text="&#x0a;"/>
+                                <Span Text="&#x0a;"/>
+                                <Span Text="Et netus et malesuada fames ac turpis egestas. Sodales ut eu sem integer vitae justo eget magna fermentum. Diam vel quam elementum pulvinar etiam non quam lacus suspendisse. Tristique et egestas quis ipsum suspendisse. Quam quisque id diam vel quam elementum pulvinar. Vel quam elementum pulvinar etiam non. Vel eros donec ac odio tempor. Consectetur adipiscing elit ut aliquam. Risus at ultrices mi tempus imperdiet nulla malesuada pellentesque elit. In mollis nunc sed id semper risus in hendrerit gravida. Quis blandit turpis cursus in hac habitasse platea dictumst quisque. Nibh sed pulvinar proin gravida hendrerit lectus. "></Span>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+
+                </Grid>
+                <Button x:Name="bigGreen" Text="SIGN WITH BANK ID" BorderRadius="9" BackgroundColor="#41AF59" HorizontalOptions="Center" WidthRequest="233" HeightRequest="47"
+                TextColor="#FFFFFF" FontSize="14" Margin="0,0,0,20"></Button>
+
+            </StackLayout>
+        </ScrollView>
+        
+    </ContentPage.Content>
+</ContentPage>

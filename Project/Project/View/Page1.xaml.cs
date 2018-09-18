@@ -49,6 +49,15 @@ namespace Project
             await Navigation.PushAsync(new SheduleInterview(itemToSend));
         }
 
+        private async void Button_Clicked_2(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Contract(itemToSend));
+        }
+
+
+
+
+
 
         //public static readonly Xamarin.Forms.BindableProperty IsNavigationBarTranslucentProperty;
 
