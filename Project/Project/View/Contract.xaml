@@ -66,7 +66,7 @@
 
                 </Grid>
                 <Button x:Name="bigGreen" Text="SIGN WITH BANK ID" BorderRadius="9" BackgroundColor="#41AF59" HorizontalOptions="Center" WidthRequest="233" HeightRequest="47"
-                TextColor="#FFFFFF" FontSize="14" Margin="0,0,0,20"></Button>
+                TextColor="#FFFFFF" FontSize="14" Margin="0,0,0,20" Clicked="bigGreen_Clicked"></Button>
 
             </StackLayout>
         </ScrollView>

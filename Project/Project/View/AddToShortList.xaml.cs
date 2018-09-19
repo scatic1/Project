@@ -13,9 +13,10 @@ namespace Project.View
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class AddToShortList : ContentPage
 	{
+   
         public AddToShortList(CardDataModel item)
         {
-            InitializeComponent();
+            InitializeComponent(); 
             BindingContext = new AddToShortListViewModel(item);
             NavigationPage.SetHasNavigationBar(this, false);
         }
@@ -29,6 +30,13 @@ namespace Project.View
         private async void Button_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new MainPage());
+        }
+
+        private async void bigGreen_Clicked(object sender, EventArgs e)
+        {
+            var itemToSend = BindingContext as AddToShortListViewModel;
+            var item = itemToSend.Item;
+            await Navigation.PushAsync(new Contract(item));
         }
     }
 }

@@ -15,19 +15,17 @@ namespace Project
     public partial class Page1 : ContentPage
     {
 
-        CardDataModel itemToSend = new CardDataModel();
+        
         public Page1()
         {
-            InitializeComponent();
-            //CustomNavigationPage.SetBarBackgroundColor(this,Color.Transparent);
-           // ((NavigationPage)Application.Current.MainPage).BackgroundImage = "https://www.pictorem.com/collection/900_Travenesia_Early%20Morning%20Sunshine%20Mount%20Latimojong%20-%20Indonesia.jpg";
+            InitializeComponent();     
             NavigationPage.SetHasNavigationBar(this, false);
 
         }
 
         public Page1(CardDataModel item)
         {
-            itemToSend = item;
+           
             InitializeComponent();
             BindingContext = new Page1ViewModel(item);
             NavigationPage.SetHasNavigationBar(this, false);
@@ -40,18 +38,24 @@ namespace Project
 
         private async void bigGreen_Clicked(object sender, EventArgs e)
         {
-            // await Navigation.PushAsync(new AddToShortList());
-            await Navigation.PushAsync(new AddToShortList(itemToSend));
+            
+            var itemToSend = BindingContext as Page1ViewModel;
+            var item = itemToSend.Item;
+            await Navigation.PushAsync(new SheduleInterview(item));
         }
 
         private async void Button_Clicked_1(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new SheduleInterview(itemToSend));
+            var itemToSend = BindingContext as Page1ViewModel;
+            var item = itemToSend.Item;
+            await Navigation.PushAsync(new SheduleInterview(item));
         }
 
         private async void Button_Clicked_2(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Contract(itemToSend));
+            var itemToSend = BindingContext as Page1ViewModel;
+            var item = itemToSend.Item;
+            await Navigation.PushAsync(new Contract(item));
         }
 
 

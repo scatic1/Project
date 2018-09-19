@@ -65,7 +65,7 @@
         
 
         <Button x:Name="bigGreen" Text="FIND ANOTHER CONSULTANT" BorderRadius="9" BackgroundColor="#41AF59" HorizontalOptions="Center" WidthRequest="233" HeightRequest="47" Margin="0,40,0,0"
-                TextColor="#FFFFFF" FontSize="14"></Button>
+                TextColor="#FFFFFF" FontSize="14" Clicked="bigGreen_Clicked"></Button>
 
     </StackLayout>
 

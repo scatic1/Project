@@ -1,3 +1,4 @@
+using Project.View;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,10 +18,9 @@ namespace Project
 			InitializeComponent ();
 		}
 
-        private void Button_Clicked(object sender, EventArgs e)
+        private async void Button_Clicked(object sender, EventArgs e)
         {
-            Label label = new Label() { Text = "Vijaj ovo", VerticalOptions = LayoutOptions.Center };
-            Content = label;
+            await Navigation.PushAsync(new DateTimePage());
         }
     }
 }

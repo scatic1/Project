@@ -13,7 +13,7 @@ namespace Project.View
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class Profile2 : ContentPage
 	{
-        CardDataModel _item = new CardDataModel();
+        
 		public Profile2 ()
 		{
 			InitializeComponent (); 
@@ -21,7 +21,7 @@ namespace Project.View
         }
         public Profile2(CardDataModel item)
         {
-            _item = item;
+       
             InitializeComponent();
             BindingContext = new Profile2ViewModel(item);
             NavigationPage.SetHasNavigationBar(this, false);
@@ -29,12 +29,16 @@ namespace Project.View
 
         private async void Button_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Page1(_item));
+            var itemToSend = BindingContext as Profile2ViewModel;
+            var item = itemToSend.Item;
+            await Navigation.PushAsync(new Page1(item));
         }
 
         private async void smallGreenT_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Invoice(_item));
+            var itemToSend = BindingContext as Profile2ViewModel;
+            var item = itemToSend.Item;
+            await Navigation.PushAsync(new Invoice(item));
         }
     }
 }

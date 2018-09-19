@@ -13,7 +13,7 @@ namespace Project.View
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class Invoice : ContentPage
 	{
-        CardDataModel _item = new CardDataModel();
+       
         public Invoice ()
 		{
 			InitializeComponent ();
@@ -21,7 +21,7 @@ namespace Project.View
         }
         public Invoice(CardDataModel item)
         {
-            _item = item;
+    
             InitializeComponent();
             BindingContext = new InvoiceViewModel(item);
             NavigationPage.SetHasNavigationBar(this, false);
@@ -29,7 +29,9 @@ namespace Project.View
 
         private async void Button_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Profile2(_item));
+            var itemToSend = BindingContext as InvoiceViewModel;
+            var item = itemToSend.Item;
+            await Navigation.PushAsync(new Profile2(item));
         }
     }
 }

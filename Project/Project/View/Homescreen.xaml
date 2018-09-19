@@ -6,8 +6,6 @@
              x:Class="Project.Homescreen">
     <ContentPage.Content>
         <RelativeLayout Padding="0">
-            <!-- Background -->
-           
             <forms:CachedImage LoadingPriority="Highest" Aspect="AspectFill"
             Source="https://s3-alpha.figma.com/img/b5cd/cc5f/afa38d984d4c2e393f253aa708e390ca"
             RelativeLayout.WidthConstraint= "{ConstraintExpression Type=RelativeToParent, Property=Width ,Factor=1.7}"

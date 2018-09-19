@@ -66,37 +66,10 @@
                        FontSize="8" Text="AVAILABLE SOON" IsVisible="{Binding NonAv}" TextColor="#5D5D5D"/>
                         <Label Margin="-13,0,0,0" FontAttributes="None" Grid.Row="0" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"
                        FontSize="8" Text="AVAILABLE NOW"  IsVisible="{Binding Availability}" TextColor="#5D5D5D"/>
-                        <!--<Label FontAttributes="None" Grid.Row="0" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"
-                       FontSize="12" Text="{Binding Name, Mode=TwoWay}" TextColor="Gray">--><!--
-                </Label>-->
+                      
             </StackLayout>
                     <Grid Grid.Row="1" VerticalOptions="Center" Margin="5">
-                        <!--<Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"></RowDefinition>
-                    <RowDefinition Height="Auto"></RowDefinition>
-                    <RowDefinition Height="Auto"></RowDefinition>
-                        </Grid.RowDefinitions>
-                        <Grid Grid.Row="0" Margin="5,0,0,0">
-                    <StackLayout Orientation="Horizontal">
-                        <Label FontAttributes="None" HorizontalTextAlignment="Start" VerticalTextAlignment="Start"
-                               FontSize="21" Text="{Binding Name, Mode=TwoWay}" TextColor="#5D5D5D"></Label>
-                       
-                    </StackLayout>
-                </Grid>
-                    <Grid Grid.Row="1" Margin="5,0,0,0">
-                        <StackLayout Orientation="Horizontal">
-                            <Label FontAttributes="None"  HorizontalTextAlignment="Start" VerticalTextAlignment="Start"
-                               FontSize="12" Text="{Binding Profession, Mode=TwoWay}" TextColor="#5D5D5D"></Label>
-
-                        </StackLayout>
-                    </Grid>
-                    <Grid Grid.Row="2" Margin="5,0,0,0">
-                        <StackLayout Orientation="Horizontal">
-                            <Label FontAttributes="None"  HorizontalTextAlignment="Start" VerticalTextAlignment="Start"
-                               FontSize="12" Text="{Binding Education, Mode=TwoWay}" TextColor="#5D5D5D"></Label>
-
-                        </StackLayout>
-                    </Grid>-->
+                      
                         <Label HorizontalOptions="FillAndExpand">
                             <Label.FormattedText>
                                 <FormattedString>

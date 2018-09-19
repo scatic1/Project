@@ -13,6 +13,7 @@ namespace Project.View
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class SheduleInterview : ContentPage
 	{
+    
 		public SheduleInterview ()
 		{
 			InitializeComponent ();
@@ -29,6 +30,13 @@ namespace Project.View
         private async void Button_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new MainPage());
+        }
+
+        private async void smallGreen_Clicked(object sender, EventArgs e)
+        {
+            var context = BindingContext as SheduledInterviewViewModel;
+            var item = context.Item;
+            await Navigation.PushAsync(new AddToShortList(item));
         }
     }
 }

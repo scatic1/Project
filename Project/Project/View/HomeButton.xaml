@@ -64,7 +64,7 @@
                     </Grid.ColumnDefinitions>
                     <Label Text="" Grid.Column="0"></Label>
                     <local1:CircleButton BackgroundColor="#5B5B5D"  FontIcon="Material" Grid.Column="1" FontSize="Large"
-        Icon="md-call-end" TextColor="White"  HeightRequest="93" WidthRequest="93"></local1:CircleButton>
+        Icon="md-call-end" TextColor="White"  HeightRequest="93" WidthRequest="93" Clicked="CircleButton_Clicked"></local1:CircleButton>
                     <Label Text="" Grid.Column="2"></Label>
                 </Grid>
                 <Label Text="EKONOMIASSISTENT" HorizontalTextAlignment="Center" TextColor="#50555C"></Label>

@@ -13,7 +13,7 @@ namespace Project.View
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class Contract : ContentPage
 	{
-        CardDataModel _item = new CardDataModel();
+      
         public Contract()
         {
             InitializeComponent();
@@ -22,14 +22,20 @@ namespace Project.View
         public Contract(CardDataModel item)
         {
             InitializeComponent();
-            _item = item;
             BindingContext = new ContractViewModel(item);
             NavigationPage.SetHasNavigationBar(this, false);
         }
 
         private async void Button_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Page1(_item));
+            var itemToSend = BindingContext as ContractViewModel;
+            var item = itemToSend.Item;
+            await Navigation.PushAsync(new Page1(item));
+        }
+
+        private async void bigGreen_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new TeamOverviewPage());
         }
     }
 }

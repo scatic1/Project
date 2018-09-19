@@ -13,14 +13,6 @@
 
     </ContentPage.BindingContext>
 
-    <!--<StackLayout>
-        -->
-    <!-- Place new controls here -->
-    <!--
-
-        
-        <Button Text="Click" Clicked="Button_Clicked"></Button>
-    </StackLayout>-->
     <StackLayout>
         <local:NavViewBotomText ></local:NavViewBotomText>
 
@@ -49,8 +41,6 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-            <!--<Button Text="Click" Clicked="Button_Clicked"></Button>-->
-
             <Button x:Name="bigRED" Text="FIND THREE NEW CANDIDATES" BorderRadius="9" BackgroundColor="#Transparent" HorizontalOptions="Center" WidthRequest="233" HeightRequest="47"
                 TextColor="#BA3C3C" FontSize="14" BorderColor="#BA3C3C" BorderWidth="1" Clicked="bigRED_Clicked"></Button>
             <Button Text="Home screen" Clicked="Button_Clicked_1"></Button>

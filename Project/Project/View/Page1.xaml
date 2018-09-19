@@ -181,11 +181,8 @@
                         </Label>
                     </Grid>
                     <Button x:Name="bigGreen"  Text="{Binding Item.Name, StringFormat='CALL {0:N} FOR AN INTERVIEW '}" BorderRadius="9" BackgroundColor="#41AF59" HorizontalOptions="Center" WidthRequest="233" HeightRequest="47"
-                TextColor="#FFFFFF" FontSize="14" Clicked="bigGreen_Clicked"></Button>
-                <Button Clicked="Button_Clicked_1" Text="De Molim te">
-                    
-                </Button>
-                    <Button Text="COntract" Clicked="Button_Clicked_2"></Button>
+                TextColor="#FFFFFF" FontSize="14" Clicked="bigGreen_Clicked" ></Button>
+               
                    
                 </StackLayout>
         </StackLayout>

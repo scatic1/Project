@@ -62,7 +62,7 @@
                 <Button x:Name="smallRed" Text="SUGGEST OTHER TIME" BorderRadius="9" BackgroundColor="Transparent" HorizontalOptions="Center" WidthRequest="142" HeightRequest="47"
                 TextColor="#BA3C3C" FontSize="10.5" BorderColor="#BA3C3C" BorderWidth="1" Grid.Column="0"></Button>
                 <Button x:Name="smallGreen" Text="ACCEPT" BorderRadius="9" BackgroundColor="#41AF59" HorizontalOptions="Center" WidthRequest="142" HeightRequest="47"
-                TextColor="#FFFFFF" FontSize="10.5" Grid.Column="1"></Button>
+                TextColor="#FFFFFF" FontSize="10.5" Grid.Column="1" Clicked="smallGreen_Clicked"></Button>
             </Grid>
         </StackLayout>
     </ContentPage.Content>

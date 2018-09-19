@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using ImageCircle;
 using ButtonCircle;
-
+using Project.View;
 
 namespace Project
 {
@@ -21,6 +21,11 @@ namespace Project
         private async void Button_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new Homescreen());
+        }
+
+        private async void CircleButton_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new DateTimePage());
         }
     }
 }

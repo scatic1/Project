@@ -41,16 +41,7 @@
             </Grid>
 
             <abstractions:CircleImage HeightRequest="180" WidthRequest="180" Source="{Binding Item.ProfileImage}" Margin="0,30"></abstractions:CircleImage>
-            <!--<Label HorizontalOptions="Center" TextColor="#5D5D5D" Margin="0,-55" HorizontalTextAlignment="Center">
-                <Label.FormattedText>
-                    <FormattedString>
-                        <Span Text="I'm sorry I Can't take your call right now. Can we reschedule for " FontSize="21"/>
-                        <Span Text="{Binding Item.NextAvailabil}" FontAttributes="Bold" FontSize="21"/>
-                        <Span Text="?" FontSize="21"/>
-                    </FormattedString>
-                </Label.FormattedText>
-            </Label>-->
-
+         
             <Grid MinimumHeightRequest="200">
                 <Label HorizontalOptions="Center" HorizontalTextAlignment="Center" Margin="0, -35" Text="#5D5D5D">
                 <Label.FormattedText>
@@ -74,7 +65,7 @@
                         <RowDefinition Height="Auto"></RowDefinition>
                     </Grid.RowDefinitions>
                     <Button x:Name="bigGreen" Text="HIRE!" BorderRadius="9" BackgroundColor="#41AF59" HorizontalOptions="Center" WidthRequest="233" HeightRequest="47"
-                TextColor="#FFFFFF" FontSize="14" Grid.Row="0"></Button>
+                TextColor="#FFFFFF" FontSize="14" Grid.Row="0" Clicked="bigGreen_Clicked"></Button>
                     <Grid Grid.Row="1">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto"></RowDefinition>
